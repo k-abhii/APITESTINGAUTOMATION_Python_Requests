@@ -9,3 +9,4 @@ print(response)
 
 # Display Response Content
 print(response.content)
+print(response.headers)
