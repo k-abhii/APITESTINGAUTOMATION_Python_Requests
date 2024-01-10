@@ -9,4 +9,8 @@ print(response)
 
 # Display Response Content
 print(response.content)
+# Display Response Headers
 print(response.headers)
+
+# Validate Status Code
+assert response.status_code ==200
