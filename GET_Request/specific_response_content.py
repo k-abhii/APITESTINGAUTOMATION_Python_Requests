@@ -29,8 +29,18 @@ print(pages[0])
 
 assert pages[0] ==2
 
-# Advance Json Path
-first_name = jsonpath.jsonpath(response_json,"data[0].first_name")
-print(first_name)
-print("*****************************LIST********")
-print(first_name[0])
+# # Advance Json Path
+# first_name = jsonpath.jsonpath(response_json,"data[0].first_name")
+# print(first_name)
+# print("*****************************LIST********")
+# print(first_name[0])
+
+# How to Fetch Byron
+# f_n = jsonpath.jsonpath(response_json,'data[3].first_name')
+# print(f_n[0])
+
+# In Python STRING and numeric concatenation
+# How to print All first_name
+for i  in range(6):
+    first_name = jsonpath.jsonpath(response_json,'data['+str(i)+'].first_name')
+    print(first_name[0])
