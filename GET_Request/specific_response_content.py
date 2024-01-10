@@ -28,3 +28,9 @@ pages = jsonpath.jsonpath(response_json,'total_pages')
 print(pages[0])
 
 assert pages[0] ==2
+
+# Advance Json Path
+first_name = jsonpath.jsonpath(response_json,"data[0].first_name")
+print(first_name)
+print("*****************************LIST********")
+print(first_name[0])
