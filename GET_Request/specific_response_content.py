@@ -9,7 +9,7 @@ response = requests.get(url)
 
 # Parse response to Json Format
 response_json = json.loads(response.text)
-# print(response_json)  
+# print(response_json)
 # {'page': 2, 'per_page': 6, 'total': 12, 'total_pages': 2,
 # 'data': [{'id': 7, 'email': 'michael.lawson@reqres.in', 'first_name': 'Michael',
 # 'last_name': 'Lawson', 'avatar': 'https://reqres.in/img/faces/7-image.jpg'},
@@ -26,3 +26,5 @@ response_json = json.loads(response.text)
 # Fetch Value Using Jsonpath --> It will return list
 pages = jsonpath.jsonpath(response_json,'total_pages')
 print(pages[0])
+
+assert pages[0] ==2
