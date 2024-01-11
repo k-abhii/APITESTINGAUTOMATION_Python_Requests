@@ -9,3 +9,6 @@ file = open("Create_Users.json","r")
 json_input = file.read()
 request_json = json.loads(json_input)
 print(request_json)
+# Make POST request with Json Input Body
+response = requests.post(url,request_json)
+print(response.content)
